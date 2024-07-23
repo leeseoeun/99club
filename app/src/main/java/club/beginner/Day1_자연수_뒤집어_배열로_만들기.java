@@ -2,6 +2,7 @@ package club.beginner;
 
 import java.util.Scanner;
 
+// https://school.programmers.co.kr/learn/courses/30/lessons/12932
 public class Day1_자연수_뒤집어_배열로_만들기 {
 
   public static int[] solution(long n) {

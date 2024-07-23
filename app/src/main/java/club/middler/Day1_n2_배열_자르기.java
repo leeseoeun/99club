@@ -2,6 +2,7 @@ package club.middler;
 
 import java.util.Scanner;
 
+// https://school.programmers.co.kr/learn/courses/30/lessons/87390
 public class Day1_n2_배열_자르기 {
 
   public static int[] solution(int n, long left, long right) {

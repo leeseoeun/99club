@@ -17,6 +17,10 @@ public class Day4_문자열을_정수로_바꾸기 {
     }
 
     return answer;
+
+    /*
+     * return Integer.parseInt(s);
+     * */
   }
 
   public static void main(String[] args) {

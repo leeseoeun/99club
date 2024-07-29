@@ -6,9 +6,6 @@ public class Day7_하노이의_탑 {
 
   public static int[][] solution(int n) {
     int[][] answer = {};
-
-
-
     return answer;
   }
 

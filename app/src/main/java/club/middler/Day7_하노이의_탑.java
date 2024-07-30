@@ -2,6 +2,7 @@ package club.middler;
 
 import java.util.Scanner;
 
+// https://school.programmers.co.kr/learn/courses/30/lessons/12946
 public class Day7_하노이의_탑 {
 
   public static int[][] solution(int n) {

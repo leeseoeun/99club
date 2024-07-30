@@ -3,6 +3,7 @@ package club.beginner;
 import java.util.ArrayList;
 import java.util.List;
 
+// https://school.programmers.co.kr/learn/courses/30/lessons/12906
 public class Day7_같은_숫자는_싫어 {
 
   public static int[] solution(int []arr) {

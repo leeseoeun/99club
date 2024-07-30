@@ -2,6 +2,7 @@ package club.middler;
 
 import java.util.ArrayList;
 
+// https://school.programmers.co.kr/learn/courses/30/lessons/42586
 class Solution {
   public ArrayList<Integer> solution(int[] progresses, int[] speeds) {
     ArrayList<Integer> answer = new ArrayList<>();

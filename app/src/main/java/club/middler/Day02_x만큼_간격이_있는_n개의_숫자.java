@@ -3,7 +3,7 @@ package club.middler;
 import java.util.Scanner;
 
 // https://school.programmers.co.kr/learn/courses/30/lessons/12954
-public class Day2_x만큼_간격이_있는_n개의_숫자 {
+public class Day02_x만큼_간격이_있는_n개의_숫자 {
 
   public static long[] solution(int x, int n) {
     long[] answer = new long[n];

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 // https://school.programmers.co.kr/learn/courses/30/lessons/42578
-public class Day6_의상 {
+public class Day06_의상 {
 
   public static int solution(String[][] clothes) {
     int answer = 1;

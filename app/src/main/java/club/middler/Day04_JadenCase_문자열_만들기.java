@@ -3,7 +3,7 @@ package club.middler;
 import java.util.Scanner;
 
 // https://school.programmers.co.kr/learn/courses/30/lessons/12951
-public class Day4_JadenCase_문자열_만들기 {
+public class Day04_JadenCase_문자열_만들기 {
 
   public static String solution(String s) {
     String answer = "";

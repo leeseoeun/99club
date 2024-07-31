@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 // https://school.programmers.co.kr/learn/courses/30/lessons/12915
-public class Day3_문자열_내_마음대로_정렬하기 {
+public class Day03_문자열_내_마음대로_정렬하기 {
 
   public static String[] solution(String[] strings, int n) {
     String[] answer = new String[strings.length];

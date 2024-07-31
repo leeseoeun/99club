@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 // https://school.programmers.co.kr/learn/courses/30/lessons/42577
-public class Day5_전화번호_목록 {
+public class Day05_전화번호_목록 {
 
   public static boolean solution(String[] phone_book) {
     boolean answer = true;

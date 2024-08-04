@@ -10,7 +10,28 @@ public class Day12_H_Index {
 
     Arrays.sort(citations);
 
+    for (int i = 0; i < citations.length; i++) {
+      int count = 0;
+      for (int j = i; j < citations.length; j++) {
+        if (citations[i] <= citations[j]) {
+          count++;
+        }
+      }
+
+      answer = Math.max(answer, Math.min(citations[i], count));
+    }
+
     return answer;
+
+    /*
+     * Arrays.sort(citations);
+     * 
+     * int len = citations.length;
+     * for (int i = 0; i < len; i++) {
+     *  int paper = len - i;
+     *  if (citations[i] >= paper) {answer = paper; break;}
+     * }
+     * */
   }
 
   public static void main(String[] args) {

@@ -1,10 +1,76 @@
 package club.middler;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
 // https://www.acmicpc.net/problem/2644
 public class Day17_촌수계산 {
 
-  public static void main(String[] args) {
-    // TODO Auto-generated method stub
+  private static List<Integer>[] graph;
+  private static boolean[] visited; // 방문한 노드를 재방문 하면 안 되므로 방문 노드를 담을 배열 선언
+
+  private static int bfs(int person1, int person2) {
+    Queue<int[]> queue = new LinkedList<>();
+
+    queue.add(new int[] { person1, 0 }); // { 첫번째 사람(노드), 촌수 }
+    visited[person1] = true;
+
+    while (!queue.isEmpty()) {
+      int[] current = queue.poll();
+      int currentPerson = current[0];
+      int currentDepth = current[1];
+
+      if (currentPerson == person2) { // 목표 노드에 도달하면 촌수 반환
+        return currentDepth;
+      }
+
+      for (int child : graph[currentPerson]) {
+        if (!visited[child]) {
+          visited[child] = true;
+          queue.add(new int[] { child, currentDepth + 1 });
+        }
+      }
+    }
+
+    return -1; // 목표 노드에 도달할 수 없는 경우 -1 반환
+  }
+
+  public static void main(String[] args) throws NumberFormatException, IOException {
+
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+    // 전체 사람 수
+    int totalPersonNumber = Integer.parseInt(br.readLine());
+
+    graph = new ArrayList[totalPersonNumber + 1];
+    for (int i = 1; i < totalPersonNumber + 1; i++) {
+      graph[i] = new ArrayList<>();
+    }
+    visited = new boolean[totalPersonNumber + 1];
+
+    // 촌수를 계산해야 하는 서로 다른 두 사람의 번호
+    String[] twoPersonNumber = br.readLine().split(" ");
+    int person1 = Integer.parseInt(twoPersonNumber[0]);
+    int person2 = Integer.parseInt(twoPersonNumber[1]);
+
+    // 부모 자식들 간의 관계의 개수
+    int parentChildNumber = Integer.parseInt(br.readLine());
+
+    for (int i = 0; i < parentChildNumber; i++) {
+      String[] strs = br.readLine().split(" ");
+      int parent = Integer.parseInt(strs[0]);
+      int child = Integer.parseInt(strs[1]);
+
+      graph[parent].add(child);
+      graph[child].add(parent);
+    }
+
+    System.out.println(bfs(person1, person2));
 
   }
 

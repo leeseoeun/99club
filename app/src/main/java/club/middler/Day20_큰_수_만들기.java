@@ -2,6 +2,7 @@ package club.middler;
 
 import java.util.Stack;
 
+// https://school.programmers.co.kr/learn/courses/30/lessons/42883
 public class Day20_큰_수_만들기 {
 
   public static String solution(String number, int k) {

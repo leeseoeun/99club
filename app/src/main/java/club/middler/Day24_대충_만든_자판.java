@@ -23,11 +23,11 @@ public class Day24_대충_만든_자판 {
       int result = 0;
 
       for (int j = 0; j < targetsArr.length; j++) {
-        if (hm.getOrDefault(targetsArr[j], -1) == -1) {
+        if (hm.get(targetsArr[j]) == null) { // if (!hm.containsKey(targetsArr[j]))
           result = -1;
           break;
         } else {
-          result += hm.getOrDefault(targetsArr[j], -1);
+          result += hm.get(targetsArr[j]);
         }
       }
 
@@ -49,7 +49,6 @@ public class Day24_대충_만든_자판 {
     String[] targets = {"FGHIJ"};
 
     System.out.println(solution(keymap, targets));
-
 
   }
 

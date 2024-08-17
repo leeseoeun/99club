@@ -14,7 +14,24 @@ public class Day27_할인_행사 {
       jh.put(want[i], number[i]);
     }
 
-    Map<String, Integer> xyz = new HashMap<>();
+    for (int i = 0; i < discount.length - 9; i++) {
+      Map<String, Integer> xyz = new HashMap<>();
+      boolean flag = true;
+
+      for (int j = i; j < 10 + i; j++) {
+        xyz.put(discount[j], xyz.getOrDefault(discount[j], 0) + 1);
+      }
+
+      for (String k : jh.keySet()) {
+        if (jh.get(k) != xyz.get(k)) {
+          flag = false;
+        }
+      }
+
+      if (flag) {
+        answer++;
+      }
+    }
 
     return answer;
   }
